@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class SearchTests {
     @Test
     void successfulSearchTest() {
-        open("https://www.google.com/");
+        open("https://www.google.org/");
         $("[name=q]").setValue("macbook").pressEnter();
         $("[id=search]").shouldHave(text("https://www.apple.com"));
     }
